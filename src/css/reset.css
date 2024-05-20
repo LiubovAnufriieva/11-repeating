@@ -1,0 +1,44 @@
+/* Reset styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+li {
+  margin: 0;
+  list-style: none;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  width: 360px;
+  height: 200px;
+  height: auto;
+  list-style: none;
+}
+
+input {
+  outline: 0;
+  margin: 0;
+  padding: 0;
+}
