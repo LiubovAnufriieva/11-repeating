@@ -17,5 +17,3 @@ function onSubmit(event) {
     onSearch(searchQuery);
     form.reset();
 }
-
-
