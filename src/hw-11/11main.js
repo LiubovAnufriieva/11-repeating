@@ -1,5 +1,5 @@
 
-import onSearch from "./js/pixabay-api";
+import onSearch from "./pixabay-api";
 
 const form = document.querySelector(".search-form");
 const galleryList = document.querySelector(".gallery");

@@ -12,7 +12,7 @@ export default function onSearch(searchQuery) {
     image_type: 'photo',
     orientation: 'horizontal',
     safesearch: true,
-    per_page: 9,
+    per_page: 15,
   });
 
   fetch(`${URL}?${searchParams}`)
