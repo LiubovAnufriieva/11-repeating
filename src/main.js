@@ -11,9 +11,14 @@ loader.hidden = true;
 function onSubmit(event) {
     event.preventDefault();
     galleryList.innerHTML = "";
-    loader.hidden = false;
     const { searchRequest } = event.currentTarget.elements;
+
     let searchQuery = searchRequest.value;
+    if (!searchQuery) {
+return alert('This field can not be empty!');
+    }
+    loader.hidden = false;
+    
     onSearch(searchQuery);
     form.reset();
 }
