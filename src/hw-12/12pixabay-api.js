@@ -1,13 +1,13 @@
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
-import { createGalleryMarkup } from './render-functions';
+import { createGalleryMarkup } from './12render-functions';
 
 export default function onSearch(searchQuery) {
-  const KEY_API = '43230635-158e2f6795128fbec19d81d21';
   const URL = 'https://pixabay.com/api/';
+  const API_KEY = '43230635-158e2f6795128fbec19d81d21';
   const searchParams = new URLSearchParams({
-    key: KEY_API,
+    key: API_KEY,
     q: searchQuery,
     image_type: 'photo',
     orientation: 'horizontal',
@@ -32,13 +32,15 @@ export default function onSearch(searchQuery) {
         });
       }
       createGalleryMarkup(data.hits);
+
     })
-    .catch(error => {
-      iziToast.error({
-        title: 'Error',
-        position: 'topRight',
-        message: `Oops! Something went wrong!`,
-      });
+    .catch (error => {
+        iziToast.error({
+            title: 'Error',
+            position: 'topRight',
+            message: `Oops! Something went wrong!`,
+          });
     })
-    .finally(() => (loader.hidden = true));
+    .finally (() => loader.hidden = true);
+
 }
