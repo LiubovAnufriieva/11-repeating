@@ -1,143 +1,178 @@
 @import url('../css/reset.css');
 
 :root {
-    font-family: "Montserrat", sans-serif;
-    /* font-size: 16px; */
-    line-height: 24px;
-    font-weight: 400;
 
-    color: #242424;
-    background-color: rgba(255, 255, 255, 0.87);
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #242424;
+  background-color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }
-
-.link-main-div {
-    padding: 15px;
+.hidden {
+  display: none;
 }
 
 .container {
-    width: 1128px;
-    margin: 0 auto;
-    padding: 10px;
+  width: 1128px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 36px;
 }
 
-.search-form {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    gap: 10px;
+form {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
 }
 
 input {
-    width: 272px;
-    height: 38px;
-    border-radius: 12px;
-    border: 1px solid #808080;
-    padding-left: 16px;
+  width: 272px;
+  height: 38px;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  padding-left: 16px;
 }
 
 input:hover {
-    border: 1px solid #000000;
+  border: 1px solid #000000;
 }
 
 input:focus {
-    border: 1px solid #EF4040;
+  border: 1px solid #4e75ff;
 }
 
-input::placeholder {
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.04em;
-    text-align: left;
-    color: #FFBEBE;
+input:placeholder {
+  font-family: Montserrat;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-align: left;
+  color: #808080;
 }
 
-.search-btn {
-    font-size: 16px;
-    width: 91px;
-    height: 40px;
-    padding: 8px 16px;
-    gap: 10px;
-    border-radius: 12px;
-    color: #fff;
-    background-color: #EF4040;
-    border: transparent;
+/* .search-btn {
+  width: 91px;
+  height: 40px;
+  padding: 8px 16px 8px 16px;
+  gap: 10px;
+  border-radius: 8px;
+  opacity: 0px;
+  color: #fff;
+  background-color: #4e75ff;
+  border: #4e75ff;
+} */
+
+.btn {
+  font-size: 16px;
+  width: 91px;
+  height: 40px;
+  padding: 8px 16px;
+  gap: 10px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #4e75ff;
+  border: transparent;
 }
 
-.search-btn:hover {
-    background-color: #FFBEBE;
-    color: #EF4040;
-    border: 2px solid #EF4040;
-}
-
-/* Styles for Gallery markup in reneder-function.js file  */
-
-.gallery {
-    width: 1130px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 22px;
+.btn:hover {
+  background-color: #6c8cff;
+  border: #6c8cff;
+  color: #4e75ff;
 }
 
 .gallery-card {
-    display: block;
-    position: relative;
-    width: 360px;
-    height: 200px;
-    border: 1px solid #808080;
-    border-radius: 8px;
-    overflow: hidden;
+  display: block;
+  position: relative;
+  width: 360px;
+  height: 200px;
+  border: 2px solid #4e75ff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.gallery-list {
+  width: 1136px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 22px;
 }
 
 .gallery-img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    overflow: hidden;
-    position: absolute;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  overflow: hidden;
+  position: absolute;
 }
 
-.card-text-div {
-    display: flex;
-    align-items: center;
-    width: 360px;
-    height: 48px;
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    background-color: #fff;
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 600;
-    line-height: 16px;
-    letter-spacing: 0.04em;
-    text-align: left;
+.gallery-info-div {
+  display: flex;
+  align-items: center;
+  width: 360px;
+  height: 48px;
+  position: absolute;
+  text-align: center;
+  bottom: 0;
+  background-color: #fff;
+  font-family: Montserrat;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.04em;
+  text-align: left;
 }
 
-.card-text-list {
-    display: flex;
-    justify-content: space-between;
-    height: 40px;
-    padding: 4px auto;
-    margin: 0 auto;
-    gap: 24px;
+.info-item-list {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  height: 40px;
+  padding: 4px auto;
+  gap: 24px;
 }
 
-.card-text>p {
-    text-align: center;
+.info-item > p {
+  text-align: center;
 }
 
-.card-text>h2 {
-    margin-bottom: 4px;
-    font-size: 12px;
+.info-item > h2 {
+  margin-bottom: 4px;
+  font-size: 12px;
+}
+
+.load-more {
+  display: flex;
+  justify-content: center;
+  margin: 20px auto;
+}
+
+.load-more-btn {
+  font-size: 16px;
+  width: 100px;
+  height: 40px;
+  padding: 8px;
+  gap: 10px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: #4e75ff;
+  border: #4e75ff;
 }
 
 
-/* HTML: <div class="loader"></div> */
-/* .loader {
+/* ----LOADER ---- */
+.loader {
   width: 120px;
   height: 22px;
   border-radius: 40px;
@@ -145,6 +180,8 @@ input::placeholder {
   border: 2px solid;
   position: relative;
   overflow: hidden;
+  padding: 10px;
+  margin-left: 140px;
 }
 .loader::before {
   content: "";
@@ -162,53 +199,27 @@ input::placeholder {
 }
 @keyframes l14 {
   100% {left: calc(100% + 20px)}
-} */
-
-/* HTML: <div class="loader"></div> */
-.loader {
-    width: 40px;
-    aspect-ratio: 1;
-    color: #f03355;
-    background: conic-gradient(currentColor 0 270deg, #0000 0);
-    border-radius: 50%;
-    animation: l14-0 4s infinite linear;
 }
 
-.loader::before {
-    content: "";
-    display: block;
-    height: 50%;
-    width: 50%;
-    border-top-left-radius: 100px;
-    background: currentColor;
-    animation: l14 0.5s infinite alternate;
+
+/* ---- ARROW UP ---- */
+.arrow-up-div {
+  position: fixed;
+  right: 75px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
 }
 
-@keyframes l14-0 {
-
-    0%,
-    24.99% {
-        transform: rotate(0deg)
-    }
-
-    25%,
-    49.99% {
-        transform: rotate(90deg)
-    }
-
-    50%,
-    74.99% {
-        transform: rotate(180deg)
-    }
-
-    75%,
-    100% {
-        transform: rotate(270deg)
-    }
+.arrow-up {
+  position: fixed;
+  right: 75px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  color: #4e75ff;
 }
 
-@keyframes l14 {
-    100% {
-        transform: translate(-10px, -10px)
-    }
-}
+
+
+ 

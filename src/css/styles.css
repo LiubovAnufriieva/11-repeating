@@ -18,14 +18,14 @@
 background-color: #ffc107;
 }
 .link-main-div {
-  padding: 10px;
+  padding: 10px 10px;
   border: 2px solid #ffc107;
   border-radius: 12px;
   width: 135px;
   height: 20px;
   display: flex;
   align-items: center;
-
+  justify-content: center;
   margin: 25px;
 }
 
@@ -35,7 +35,7 @@ background-color: #ffc107;
 
 .link-main {
   font-family: 'Montserrat', sans-serif;
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 700;
   color: #ffc107;
 }
@@ -45,7 +45,7 @@ background-color: #ffc107;
 }
 
 .container {
-  width: 1128px;
+  width: 1440px;
   margin: 0 auto;
   padding: 10px;
 }

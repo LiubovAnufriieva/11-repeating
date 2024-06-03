@@ -1,26 +1,24 @@
 
-import onSearch from "./11pixabay-api";
+import onSearch from './11pixabay-api';
 
-const form = document.querySelector(".search-form");
-const galleryList = document.querySelector(".gallery");
-const loader = document.querySelector(".loader");
+const form = document.querySelector('.search-form');
+const galleryList = document.querySelector('.gallery');
+const loader = document.querySelector('.loader');
 
-form.addEventListener("submit", onSubmit);
+form.addEventListener('submit', onSubmit);
 loader.hidden = true;
-
 
 function onSubmit(event) {
     event.preventDefault();
     galleryList.innerHTML = "";
     const { searchRequest } = event.currentTarget.elements;
-   
-    let searchQuery = searchRequest.value;
+    let searchQuery = searchRequest.value.trim();
+
     if (!searchQuery) {
-return alert('This field can not be empty!');
+        return alert('This field can not be empty!');
     }
     loader.hidden = false;
 
-    
     onSearch(searchQuery);
     form.reset();
 }
